@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        .center {
+            display: block;
+            margin: auto;
+        }
+
+        .btn {
+            border: none;
+            background-color: #4CAF50;
+            padding: 8px 35px;
+            color: rgb(0, 0, 0);
+            display: block;
+            font-size: 120%;
+            margin: 0 auto;
+        }
+
+        .btn:hover {
+            background-color: #00FF00;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <img src="img/bulb-off.jpg" alt="" class="center">
+    <br>
+    <button class="btn">Turn On</button>
+
+    <script>
+        let button = document.querySelector('.btn');
+
+        button.addEventListener('click', function () {
+            let img = document.getElementsByClassName('center')[0];
+            if (button.textContent == 'Turn On') {
+                img.src = "img/bulb-on.jpg";
+                button.innerHTML = "Turn off";
+                button.style.backgroundColor = "red";
+            }
+            else{
+                img.src ="img/bulb-off.jpg";
+                button.innerHTML = "Turn On";
+                button.style.backgroundColor = "#00FF00";
+            }
+        })
+    </script>
+</body>
+
+</html>
